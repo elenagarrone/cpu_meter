@@ -24,8 +24,14 @@
 			var socket = io.connect('http://localhost')
 			socket.on('usage', function(data){
 				var usage = data.usage
-				$('body main samp').text(usage+'%');
-				$('body main meter').attr('value', usage)
+				$('body header section h1').fadeIn(1000, function() {
+					$('body header section p').fadeIn(200, function() {
+						$('body main meter').fadeIn(1000, function() {
+								$('body main samp').text(usage+'%');
+								$('body main meter').attr('value', usage)
+						})
+					})
+				})
 			})
 		</script>
 
