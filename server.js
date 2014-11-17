@@ -17,9 +17,16 @@ app.get('/', function(req, res){
 	res.render('index', {layout: 'layout'})
 });
 
-http.listen(2000, function(){
-	console.log('listening on port 2000')
-});
+app.set('port', (process.env.PORT || 3000))
+
+module.exports = http
+if (!module.parent) {
+  console.log('Server running on http://localhost:3000')
+  http.listen(app.get('port'), function () {
+    console.log("Node app is running at localhost:" + app.get('port'))
+  });
+};
+
 
 var stream = monitor.start({ delay: 60, stream: true });
 
