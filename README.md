@@ -12,3 +12,5 @@ Technologies:
 - JavaScript
 - CSS/HTML
 - JQuery
+- Socket.io
+- os-monitor
