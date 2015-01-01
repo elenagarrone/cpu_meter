@@ -1,14 +1,13 @@
 body {
 	background: #2E4272;
+  margin: 25% 0% 0% 0%;
 }
 
 body header section h1 {
   display: none;
-	color: white;
-	font-family: 'Montserrat', sans-serif;
-	text-align: center;
-	margin-top: 15%;
-	margin-bottom: 0;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
 	font-size: 260%;
 }
 

@@ -2,10 +2,9 @@
 <html>
 	<head>
 		<title>CPU Meter</title>
-		<script src="/socket.io/socket.io.js"></script>
+		<link href='css/reset.css' rel='stylesheet' type='text/css'>
+		<link href='css/style.css' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
-		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<link href='/style.css' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 	</head>
@@ -20,21 +19,9 @@
 		<%- body %>
 		</main>
 
-		<script>
-			var socket = io.connect('/')
-			socket.on('usage', function(data){
-				var usage = data.usage
-				$('body header section h1').fadeIn(1000, function() {
-					$('body header section p').fadeIn(200, function() {
-						$('body main meter').delay(200).fadeIn(1000, function() {
-							$('body main meter').attr('value', usage)
-							$('body main samp').text(usage);
-						})
-					})
-				})
-			})
-		</script>
-
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="cpu_meter.js"></script>
 
 	</body>
 </html>
