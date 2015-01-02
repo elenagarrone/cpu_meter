@@ -1,10 +1,12 @@
 body {
 	background: #2E4272;
-  margin: 25% 0% 0% 0%;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 body header section h1 {
-  display: none;
   color: white;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
@@ -12,25 +14,22 @@ body header section h1 {
 }
 
 body header section p {
-  display: none;
 	color: #7887AB;
 	text-align: center;
 	font-family: 'Poiret One', cursive;
 }
 
 meter {
-  display: none;
-  margin-left:30%;
   margin-top:2%;
-  width: 40%;
+  width: 100%;
   height: 25px;
-  -webkit-appearance: none; /* Reset appearance */
+  -webkit-appearance: none;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
 
 meter::-webkit-meter-bar {
-  background: none; /* Required to get rid of the default background property */
+  background: none;
   background-color: whiteSmoke;
   box-shadow: 0 5px 5px -5px #333 inset;
 }
@@ -38,8 +37,8 @@ meter::-webkit-meter-bar {
 meter::-webkit-meter-optimum-value {
   box-shadow: 0 5px 5px -5px #999 inset;
   background-image: linear-gradient(
-    90deg, 
-    #8bcf69 5%, 
+    90deg,
+    #8bcf69 5%,
     #e6d450 5%,
     #e6d450 15%,
     #f28f68 15%,
@@ -56,7 +55,6 @@ samp {
   display: block;
   margin-left: auto;
   margin-right: auto;
-/*  display: block;*/
   font-size: 150%;
   text-align: center;
   color: white;
