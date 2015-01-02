@@ -14,7 +14,7 @@ app.use(require('express').static(__dirname + '/public'));
 
 
 app.get('/', function(req, res){
-	res.render('index', {layout: 'layout'})
+  res.render('index', { layout: 'layout' })
 });
 
 app.set('port', (process.env.PORT || 3000))
@@ -30,12 +30,9 @@ if (!module.parent) {
 
 var stream = monitor.start({ delay: 60, stream: true });
 
-
 io.on('connection', function(socket){
-	stream.on('monitor', function(event){
-		var loadavg = Math.floor(event.loadavg[0]*100);
-		socket.emit('usage', {usage: loadavg});
-	});
+  stream.on('monitor', function(event){
+    var loadavg = Math.floor(event.loadavg[0]*100);
+    socket.emit('usage', { usage: loadavg });
+  });
 });
-
-

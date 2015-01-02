@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>CPU Meter</title>
-		<link href='css/reset.css' rel='stylesheet' type='text/css'>
-		<link href='css/style.css' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-	</head>
+  <head>
+    <title>CPU Meter</title>
+    <link href='css/reset.css' rel='stylesheet' type='text/css'>
+    <link href='css/style.css' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+  </head>
 
-	<body>
-		<header>
-			<section><h1>node CPU monitor</h1></section>
-			<section><p>node micro service that feeds your computers central processing unit's usage</p></section>
-		</header>
+  <body>
+    <header>
+      <section><h1>node CPU monitor</h1></section>
+      <section><p>node micro service that feeds your computers central processing unit's usage</p></section>
+    </header>
 
-		<main>
-		<%- body %>
-		</main>
+    <main>
+      <%- body %>
+    </main>
 
-		<script src="/socket.io/socket.io.js"></script>
-		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script src="cpu_meter.js"></script>
-
-	</body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="cpu_meter.js"></script>
+  </body>
 </html>
